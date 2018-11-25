@@ -7,4 +7,8 @@ before_install:
 
 script:
   - docker run docker-react npm run test -- --coverage
-  
+
+deploy:
+  provider: gae
+  keyfile: "react-docker-03d1871e198e.json.enc"
+  project: "react-docker-223517"

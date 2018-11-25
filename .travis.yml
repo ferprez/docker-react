@@ -1,17 +1,15 @@
 sudo: required
 language: node_js
 node_js:
-  - "10"
+- '10'
 services:
-  - docker
-
+- docker
 before_install:
-  - docker build -t docker-react -f Dockerfile .
-
-# script:
-#   - docker run docker-react npm run test -- --coverage
-
+- openssl aes-256-cbc -K $encrypted_9b77dec1069e_key -iv $encrypted_9b77dec1069e_iv
+  -in react-docker-03d1871e198e.json.enc -out react-docker-03d1871e198e.json
+  -d
+- docker build -t docker-react -f Dockerfile .
 deploy:
   provider: gae
-  keyfile: "react-docker-03d1871e198e.json.enc"
-  project: "react-docker-223517"
+  keyfile: react-docker-03d1871e198e.json
+  project: react-docker-223517

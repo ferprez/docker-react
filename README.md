@@ -1,3 +1,3 @@
 ## Deployed url
 
-https://react-docker-223517.appspot.com/
+https://mystifying-goldberg-318d2b.netlify.com/

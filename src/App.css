@@ -1,25 +1,88 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(24, 33, 83, 1);
 }
 
 .App-logo {
   animation: App-logo-spin infinite 3s linear;
-  height: 40vmin;
+  height: 40px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.App-Hero {
+  height: 580px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 252, 0.2), rgba(0, 0, 0, .75)),
+    url('https://placeimg.com/640/480/any');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App-Info-Container {
+  width: 940px;
+  height: 470px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.App-Info-Image {
+  background-image: url(https://scontent.faep7-1.fna.fbcdn.net/v/t1.0-9/s960x960/59582907_10218621229180926_5629396283199324160_o.jpg?_nc_cat=104&_nc_eui2=AeGz8iLqVTOToyTDWc7R6wBDE9AWg0beFrXIrK0X9c8K7LTFsyAadVMEXkW7knsHWqMQRRa71wBnt8V7XLWiNcgMcR75NtO3eoDagTFgRMWDbw&_nc_oc=AQlO-dANGVtXb9fEb2m2zZkze00SFqoQdmOwegF1NCu08VL231Z_t9PWhQIV2oaLu2U&_nc_ht=scontent.faep7-1.fna&oh=020afb9a08e86fcd4d18d6052634bd2e&oe=5E43AD3A);
+  background-size: cover;
+  background-position: center;
+}
+
+.App-About {
+  height: 400px;
+}
+
+.App-Social-container {
+  width: 940px;
+  height: 75px;
+  background-color: rgba(24, 33, 83, 1);
+}
+
+.App-Timeline-header {
+  height: 80px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+
+.App-Timeline-row  {
+  display: grid;
+  margin:auto;
+  grid-template-columns: 1fr 1fr;
+  height: 200px;
+}
+
+.App-Timeline-date::after {
+  content: '';
+  height: 100%;
+  border-right: 1px solid #dddddd;
+}
+
+.App-Timeline-description::before {
+  content: '';
+  height: 8px;
+  width: 8px;
+  background: #000;
+  position: absolute;
+  transform: translateX(-55%) translateY(-2.8rem);
+  border-radius: 50%;
+}
+
+.App-footer {
+  height: 550px;
 }
 
 @keyframes App-logo-spin {
